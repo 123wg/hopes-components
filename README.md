@@ -1,29 +1,14 @@
 # hopes-components
 
-## Project setup
-```
-yarn install
-```
+# hopes 公共组件库
+> git 地址: git clone https://github.com/123wg/hopes-components.git
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### 项目依赖下载
+    npm/yarn install
+### 项目运行
+    npm/yarn run serve
+### 项目打包
+    npm/yarn run build
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  
