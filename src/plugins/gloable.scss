@@ -1,0 +1,26 @@
+/**
+*@author: wanggang
+*@date: 2020-04-26 14:16:57
+*@description: 配置分辨率适配和全局公共样式
+*/
+// 定义基础屏幕分辨率变量
+$vw_base: 1920;
+$vh_base: 1080;
+
+// 计算视口宽度,vw()中的参数，直接传像素值
+@function vw($px) {
+    @return ($px / $vw_base) * 100vw;
+}
+
+// 计算视口高度, vh()中的参数，直接传像素值
+@function vh($px) {
+    @return ($px / $vh_base) * 100vh;
+}
+
+// 项目主题色调
+$theme-main:rgba(11, 164, 195, 1);
+$theme-bg:rgba(11, 164, 195, 0.1);
+$theme-select:rgba(11, 164, 195, 0.2);
+// 字体大小可根据需求自行补充
+// 10px 字体
+$font-size10: vw(10);
