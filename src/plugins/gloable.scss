@@ -17,10 +17,12 @@ $vh_base: 1080;
     @return ($px / $vh_base) * 100vh;
 }
 
-// 项目主题色调
-$theme-main:rgba(11, 164, 195, 1);
-$theme-bg:rgba(11, 164, 195, 0.1);
-$theme-select:rgba(11, 164, 195, 0.2);
-// 字体大小可根据需求自行补充
-// 10px 字体
-$font-size10: vw(10);
+$theme-main: #1a334c;
+$theme-select:#3f4a58;
+$theme-bg:  #042236;
+$theme-border:#063e7a;
+$theme-hover:#0e5252;
+$theme-text-hs:#ea9307;
+$theme-text-bs:#ffffff;
+$theme-dark: rgba(47, 49, 49,1);
+$theme-shadow:	rgba(88, 88, 88,1);
