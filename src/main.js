@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import { Plugin } from 'vue-fragment';
+import store from '@/store';
 import App from './App.vue';
 import router from './router';
-import store from './store';
 import './plugins/element';
 import './plugins/common.css';
 import './plugins/reset.css';

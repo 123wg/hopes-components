@@ -34,7 +34,7 @@ export default {
     height: 100%;
     .home-main {
         width: 100%;
-        height: vh(1850);
+        height: vh(1010);
         background: $theme-dark;
         .el-container {
             width: 100%;

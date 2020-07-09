@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import pageRoutes from '@/router/modules/page';
 import tableRoutes from '@/router/modules/table';
+import dragRoutes from '@/router/modules/drag';
 // import treeRoutes from '@/router/modules/tree';
 import Layout from '../views/Home.vue';
 
@@ -28,6 +29,7 @@ const routes = [
             },
         ],
     },
+    dragRoutes,
     pageRoutes,
     tableRoutes,
 ];
