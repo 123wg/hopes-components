@@ -1,5 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import pageRoutes from '@/router/modules/page';
+import tableRoutes from '@/router/modules/table';
+// import treeRoutes from '@/router/modules/tree';
 import Layout from '../views/Home.vue';
 
 Vue.use(VueRouter);
@@ -25,62 +28,8 @@ const routes = [
             },
         ],
     },
-    {
-        path: '/table',
-        name: 'table',
-        component: Layout,
-        meta: {
-            title: '表单',
-        },
-        redirect: 'table1',
-        children: [
-            {
-                path: 'table1',
-                name: 'index',
-                component: () => import('@/components/table/Table1.vue'),
-                meta: {
-                    title: '表单1',
-                },
-            },
-            {
-                path: 'table2',
-                name: 'index',
-                component: () => import('@/components/table/Table2.vue'),
-                meta: {
-                    title: '表单2',
-                },
-            },
-
-        ],
-    },
-    {
-        path: '/page',
-        name: 'page',
-        component: Layout,
-        meta: {
-            title: '分页',
-        },
-        redirect: 'page1',
-        children: [
-            {
-                path: 'page1',
-                name: 'page1',
-                component: () => import('@/components/page/Page1.vue'),
-                meta: {
-                    title: '表单1',
-                },
-            },
-            {
-                path: 'page2',
-                name: 'page2',
-                component: () => import('@/components/page/Page2.vue'),
-                meta: {
-                    title: '表单2',
-                },
-            },
-
-        ],
-    },
+    pageRoutes,
+    tableRoutes,
 ];
 
 const router = new VueRouter({
