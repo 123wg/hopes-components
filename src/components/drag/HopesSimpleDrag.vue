@@ -7,15 +7,15 @@
                     <HopesSimpleDrag1></HopesSimpleDrag1>
                 </div>
                 <div class="content-item">
-                    <hopes-title :title="title.title1"></hopes-title>
+                    <hopes-title :title="title.title2"></hopes-title>
                     <HopesSimpleDrag2></HopesSimpleDrag2>
                 </div>
                 <div class="content-item">
-                    <hopes-title :title="title.title1"></hopes-title>
+                    <hopes-title :title="title.title3"></hopes-title>
                     <HopesSimpleDrag1></HopesSimpleDrag1>
                 </div>
                 <div class="content-item">
-                    <hopes-title :title="title.title1"></hopes-title>
+                    <hopes-title :title="title.title4"></hopes-title>
                     <HopesSimpleDrag1></HopesSimpleDrag1>
                 </div>
             </div>
@@ -39,6 +39,18 @@ export default {
             title: {
                 title1: {
                     name: '拖拽排序',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag1',
+                },
+                title2: {
+                    name: '基础拖拽',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag1',
+                },
+                title3: {
+                    name: '带禁用项拖拽',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag1',
+                },
+                title4: {
+                    name: '交叉拖拽',
                     position: 'HopesSimpleDrag/HopesSimpleDrag1',
                 },
             },
