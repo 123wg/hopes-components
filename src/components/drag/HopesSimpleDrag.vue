@@ -12,11 +12,15 @@
                 </div>
                 <div class="content-item">
                     <hopes-title :title="title.title3"></hopes-title>
-                    <HopesSimpleDrag1></HopesSimpleDrag1>
+                    <HopesSimpleDrag3></HopesSimpleDrag3>
                 </div>
                 <div class="content-item">
                     <hopes-title :title="title.title4"></hopes-title>
-                    <HopesSimpleDrag1></HopesSimpleDrag1>
+                    <HopesSimpleDrag4></HopesSimpleDrag4>
+                </div>
+                <div class="content-item">
+                    <hopes-title :title="title.title5"></hopes-title>
+                    <HopesSimpleDrag5></HopesSimpleDrag5>
                 </div>
             </div>
         </el-scrollbar>
@@ -27,31 +31,41 @@
 import HopesTitle from '@/components/common/HopesTitle.vue';
 import HopesSimpleDrag1 from '@/components/drag/hopesSimpleDrag/HopesSimpleDrag1.vue';
 import HopesSimpleDrag2 from '@/components/drag/hopesSimpleDrag/HopesSimpleDrag2.vue';
+import HopesSimpleDrag3 from '@/components/drag/hopesSimpleDrag/HopesSimpleDrag3.vue';
+import HopesSimpleDrag4 from '@/components/drag/hopesSimpleDrag/HopesSimpleDrag4.vue';
+import HopesSimpleDrag5 from '@/components/drag/hopesSimpleDrag/HopesSimpleDrag5.vue';
 
 export default {
     components: {
         HopesTitle,
         HopesSimpleDrag1,
         HopesSimpleDrag2,
+        HopesSimpleDrag3,
+        HopesSimpleDrag4,
+        HopesSimpleDrag5,
     },
     data() {
         return {
             title: {
                 title1: {
-                    name: '拖拽排序',
-                    position: 'HopesSimpleDrag/HopesSimpleDrag1',
-                },
-                title2: {
                     name: '基础拖拽',
                     position: 'HopesSimpleDrag/HopesSimpleDrag1',
                 },
+                title2: {
+                    name: '动画拖拽',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag2',
+                },
                 title3: {
-                    name: '带禁用项拖拽',
-                    position: 'HopesSimpleDrag/HopesSimpleDrag1',
+                    name: '穿梭框',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag3',
                 },
                 title4: {
-                    name: '交叉拖拽',
-                    position: 'HopesSimpleDrag/HopesSimpleDrag1',
+                    name: '克隆拖拽',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag4',
+                },
+                title5: {
+                    name: '带插槽的拖动',
+                    position: 'HopesSimpleDrag/HopesSimpleDrag5',
                 },
             },
         };
@@ -78,7 +92,10 @@ export default {
 
         .content-item {
             width: 49.5%;
-            height: vh(500);
+            min-height: vh(500);
+            &:nth-child(3) {
+                width: 100%;
+            }
         }
     }
 

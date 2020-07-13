@@ -1,7 +1,13 @@
 <template>
     <div class="simple-drag-first">
-        <vuedraggable v-model="personList" :options="options">
-            <div class="first-item" :class="{ignore: item.age===21}" v-for="(item,index) in personList" :key="index">{{item}}{{item.disable?'------禁止拖拽':''}}</div>
+        <vuedraggable v-model="personList" :options="options"
+                      @clone="clone"
+                      :group="{ name: 'person', pull: 'clone' }">
+            <div class="first-item"  v-for="(item,index) in firstList" :key="index">{{item}}</div>
+        </vuedraggable>
+        <vuedraggable v-model="personList" :options="options"
+                      :group="{ name: 'person', pull: false}">
+            <div class="first-item" v-for="(item,index) in secondList" :key="index">{{item}}</div>
         </vuedraggable>
     </div>
 </template>
@@ -18,7 +24,7 @@ export default {
             list: [
                 1, 2, 3, 4, 5,
             ],
-            personList: [
+            firstList: [
                 {
                     name: '夏梦龙',
                     age: 23,
@@ -26,6 +32,7 @@ export default {
                 {
                     name: '靳洪刚',
                     age: 18,
+                    disable: true,
 
                 },
                 {
@@ -42,11 +49,14 @@ export default {
                     age: 16,
                 },
             ],
+            secondList: [
+                {
+                    name: '梁丽丽',
+                    age: 23,
+                },
+            ],
             options: {
                 animation: 150,
-                filter: '.ignore', // 哪些类不能被缩放
-                // draggable: '.ignore', // 哪些类能被缩放
-                chosenClass: 'chosen', // 被选中元素class
                 dragClass: 'drag', // 拖动元素class
                 scrollSpeed: 50, // 拖动速度
             },
@@ -58,7 +68,9 @@ export default {
     mounted() {},
     destroyed() {},
     methods: {
-
+        clone(options) {
+            console.log(options.oldIndex);
+        },
     },
 };
 </script>
@@ -66,21 +78,27 @@ export default {
 .simple-drag-first {
     width: 100%;
     height: vh(500);
-    .first-item {
-        width: 100%;
-        height: vh(60);
-        background: cadetblue;
-        margin: vh(5) 0;
-        // text-align: center;
-        padding-left: vw(40);
-        line-height: vh(60);
-        cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div {
+        width: 49.5%;
+         .first-item {
+             width: 100%;
+            background: cadetblue;
+            margin: vh(5) 0;
+            height: vh(60);
+            line-height: vh(60);
+            font-size: vw(14);
+            cursor: pointer;
+        }
+        .chosen {
+            background: aquamarine;
+        }
+        .drag {
+            background: bisque;
+        }
     }
-    .chosen {
-        background: aquamarine;
-    }
-    .drag {
-        background: bisque;
-    }
+
 }
 </style>
