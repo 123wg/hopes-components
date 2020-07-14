@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import pageRoutes from '@/router/modules/page';
 import tableRoutes from '@/router/modules/table';
 import dragRoutes from '@/router/modules/drag';
+import testRoutes from '@/router/modules/test';
 // import treeRoutes from '@/router/modules/tree';
 import Layout from '../views/Home.vue';
 
@@ -32,6 +33,7 @@ const routes = [
     dragRoutes,
     pageRoutes,
     tableRoutes,
+    testRoutes,
 ];
 
 const router = new VueRouter({
