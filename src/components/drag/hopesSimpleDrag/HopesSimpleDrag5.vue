@@ -1,7 +1,9 @@
 <template>
     <div class="simple-drag-first">
         <vuedraggable v-model="personList" :options="options">
-            <div class="first-item" :class="{ignore: item.age===21}" v-for="(item,index) in personList" :key="index">{{item}}{{item.disable?'------禁止拖拽':''}}</div>
+            <div slot="header" class="explain">表头</div>
+            <div class="first-item" :class="{ignore:item.age===18 || item.age===21}" v-for="(item,index) in personList" :key="index">{{item}}</div>
+            <div slot="footer" class="explain">表尾</div>
         </vuedraggable>
     </div>
 </template>
@@ -26,6 +28,7 @@ export default {
                 {
                     name: '靳洪刚',
                     age: 18,
+                    disable: true,
 
                 },
                 {
@@ -43,9 +46,9 @@ export default {
                 },
             ],
             options: {
+                group: 'test',
                 animation: 150,
-                filter: '.ignore', // 哪些类不能被缩放
-                // draggable: '.ignore', // 哪些类能被缩放
+                draggable: '.first-item',
                 chosenClass: 'chosen', // 被选中元素class
                 dragClass: 'drag', // 拖动元素class
                 scrollSpeed: 50, // 拖动速度
@@ -75,6 +78,13 @@ export default {
         padding-left: vw(40);
         line-height: vh(60);
         cursor: pointer;
+    }
+    .explain {
+        width: 100%;
+        height: vh(50);
+        line-height: vh(50);
+        text-align: center;
+        border: 1px solid $theme-shadow;
     }
     .chosen {
         background: aquamarine;

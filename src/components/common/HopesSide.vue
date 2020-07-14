@@ -11,7 +11,7 @@
             active-text-color="#ffffff"
             mode="vertical"
         >
-            <hopes-slider :routes="$router.options.routes" :basePath="'/'"></hopes-slider>
+            <hopes-slider :routes="$router.options.routes" :basePath="''"></hopes-slider>
         </el-menu>
     </div>
 </template>
@@ -28,10 +28,12 @@ export default {
             iscollapse: false,
         };
     },
-    computed: {},
+    computed: {
+    },
     watch: {},
     created() {},
     mounted() {
+        // console.log(this.$route);
     },
     destroyed() {},
     methods: {},
@@ -42,9 +44,9 @@ export default {
     .el-menu {
         border-right: 0 !important;
     }
-    // .el-menu-item.is-active {
-    //         background: $theme-select !important;
-    // }
+    .el-menu-item.is-active {
+            background: $theme-text-hs !important;
+    }
     .el-menu-item:focus, .el-menu-item:hover{
         background: $theme-text-hs !important;
     }

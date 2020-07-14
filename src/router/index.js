@@ -15,10 +15,10 @@ VueRouter.prototype.push = function push(location) {
 
 const routes = [
     {
-        path: '/',
+        path: '',
         name: 'index',
         component: Layout,
-        redirect: '/index',
+        redirect: 'index',
         children: [
             {
                 path: 'index',

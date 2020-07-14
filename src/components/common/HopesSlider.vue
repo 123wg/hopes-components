@@ -9,7 +9,7 @@
                     </template>
                     <hopes-slider  :routes="item.children" :basePath="item.path+'/'"></hopes-slider>
                 </el-submenu>
-                <el-menu-item v-else :index="handlePath(item.children[0].path)">
+                <el-menu-item v-else :index="handlePath(item.path+'/'+item.children[0].path,'11')">
                     <i class="el-icon-document"></i>
                     <span slot="title">{{item.children[0].meta.title}}</span>
                 </el-menu-item>
@@ -45,6 +45,7 @@ export default {
     destroyed() {},
     methods: {
         handlePath(path, type) {
+            console.log(path);
             if (type !== 'menu') {
                 return this.basePath + path;
             }
