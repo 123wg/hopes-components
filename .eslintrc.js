@@ -8,6 +8,7 @@ module.exports = {
         '@vue/airbnb',
     ],
     globals: {
+        Cesium:false,
     },
     rules: {
         // 强制 error

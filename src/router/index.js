@@ -4,6 +4,7 @@ import pageRoutes from '@/router/modules/page';
 import tableRoutes from '@/router/modules/table';
 import dragRoutes from '@/router/modules/drag';
 import testRoutes from '@/router/modules/test';
+import cesiumRoute from '@/router/modules/cesium';
 // import treeRoutes from '@/router/modules/tree';
 import Layout from '../views/Home.vue';
 
@@ -34,6 +35,7 @@ const routes = [
     pageRoutes,
     tableRoutes,
     testRoutes,
+    cesiumRoute,
 ];
 
 const router = new VueRouter({
