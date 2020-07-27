@@ -31,6 +31,23 @@ const routes = [
             },
         ],
     },
+    {
+        path: '/scroll',
+        name: 'scroll',
+        component: Layout,
+        redirect: 'index',
+        children: [
+            {
+                path: 'index',
+                name: 'scroll-index',
+                component: () => import('@/views/Scroll.vue'),
+                meta: {
+                    title: '锚点滑动',
+                },
+            },
+        ],
+    },
+
     dragRoutes,
     pageRoutes,
     tableRoutes,

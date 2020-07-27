@@ -35,7 +35,8 @@ export default {
     .home-main {
         width: 100%;
         height: vh(1010);
-        background: $theme-dark;
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
         .el-container {
             width: 100%;
             height: 100%;

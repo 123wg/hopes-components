@@ -45,7 +45,6 @@ export default {
     destroyed() {},
     methods: {
         handlePath(path, type) {
-            console.log(path);
             if (type !== 'menu') {
                 return this.basePath + path;
             }
