@@ -6,6 +6,7 @@ import dragRoutes from '@/router/modules/drag';
 import testRoutes from '@/router/modules/test';
 import cesiumRoute from '@/router/modules/cesium';
 // import treeRoutes from '@/router/modules/tree';
+import TestEditor from '@/views/TestEditor.vue';
 import Layout from '../views/Home.vue';
 
 Vue.use(VueRouter);
@@ -30,6 +31,11 @@ const routes = [
                 },
             },
         ],
+    },
+    {
+        path: '/testEditor',
+        name: 'testEditor',
+        component: TestEditor,
     },
     {
         path: '/scroll',

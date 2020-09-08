@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 function resolve(dir) {
     return path.join(__dirname, dir);
@@ -55,5 +56,13 @@ module.exports = {
     //     changOrigin: true,
     //   },
     // },
+    },
+    configureWebpack: {
+        plugins: [
+            new webpack.ProvidePlugin({
+                'window.Quill': 'quill/dist/quill.js',
+                Quill: 'quill/dist/quill.js',
+            }),
+        ],
     },
 };

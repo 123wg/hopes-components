@@ -25,7 +25,7 @@ export default {
     },
     data() {
         return {
-            iscollapse: false,
+            iscollapse: true,
         };
     },
     computed: {
